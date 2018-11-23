@@ -14,11 +14,10 @@ class FeedbackController extends Controller
         return view('feedback-form',compact('agents'));
     }
 
-    public function feedback_submit(FeedbackRequest $request){
-
-
+    public function feedback_submit(FeedbackRequest $request)
+    {
         FeedbackModel::create($request->all());
-        return $request->all();
+        return redirect(route('feedback.home'))->with(['success' => true]);
 
     }
 }

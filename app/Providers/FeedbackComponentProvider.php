@@ -22,6 +22,8 @@ class FeedbackComponentProvider extends ServiceProvider
         Form::component('submit_generic', 'components.form.form-group-generic-1-submit', ['title']);
         Form::component('star_label','components.form.form-star-label',['class' => null,'for' => null,'title' => null]);
         Form::component('form_errors','components.form.form-errors',[]);
+        Form::component('form_success','components.form.form-success',[]);
+        Form::component('login_form','components.form.login-form',[]);
 
         Html::component('cover_heading','components.html.cover-heading-h1',['title','id' => null]);
     }

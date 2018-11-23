@@ -10,7 +10,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="{{ secure_asset('css/style.css')}}" />
+    @if((env('APP_ENV') == 'local'))
+        <link rel="stylesheet" href="{{ asset('css/style.css')}}" />
+    @else
+        <link rel="stylesheet" href="{{ secure_asset('css/style.css')}}" />
+    @endif
+
+
     <title>Feedback Form - @yield('title')</title>
 </head>
 <body>

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="{{ asset('css/dashboard.css')}}" />
+    <link rel="stylesheet" href="{{ secure_asset('css/dashboard.css')}}" />
 
     <title>Feedback Form Admin - @yield('title')</title>
 
